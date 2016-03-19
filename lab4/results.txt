@@ -1,0 +1,40 @@
+Load factor .2, keys = 120002:
+  Open hash table:
+    0.053398 0.059822 0.053118 0.052911 0.052758 
+    Average: 0.0544014
+  Closed hash table, linear probing:
+    0.04721 0.046685 0.046402 0.046594 0.046415 
+    Average: 0.0466612
+  Closed hash table, quadratic probing:
+    0.046921 0.047169 0.046968 0.046981 0.046917 
+    Average: 0.0469912
+Load factor .3, keys = 180003:
+  Open hash table:
+    0.065098 0.066167 0.065987 0.066075 0.065979 
+    Average: 0.0658612
+  Closed hash table, linear probing:
+    0.057722 0.057224 0.057088 0.057011 0.055616 
+    Average: 0.0569322
+  Closed hash table, quadratic probing:
+    0.05304 0.05277 0.052909 0.053178 0.052976 
+    Average: 0.0529746
+Load factor .4, keys = 240004:
+  Open hash table:
+    0.072687 0.073756 0.073701 0.073868 0.073603 
+    Average: 0.073523
+  Closed hash table, linear probing:
+    0.06419 0.063761 0.063138 0.063433 0.063087 
+    Average: 0.0635218
+  Closed hash table, quadratic probing:
+    0.064698 0.064576 0.064654 0.064446 0.064375 
+    Average: 0.0645498
+Load factor .5, keys = 300005:
+  Open hash table:
+    0.087355 0.087747 0.08764 0.087768 0.087571 
+    Average: 0.0876162
+  Closed hash table, linear probing:
+    0.076841 0.076227 0.076179 0.076284 0.075885 
+    Average: 0.0762832
+  Closed hash table, quadratic probing:
+    0.077818 0.077882 0.077555 0.077763 0.077729 
+    Average: 0.0777494
