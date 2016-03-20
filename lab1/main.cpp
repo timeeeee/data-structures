@@ -18,6 +18,7 @@ int main() {
     std::cout << "data.txt not found.\n";
     return 1;
   }
+  
   while (infile) {
     infile >> list;
   }

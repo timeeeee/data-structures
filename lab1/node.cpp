@@ -12,7 +12,6 @@ Node::Node(int x)
 // Recursively delete all following nodes
 Node::~Node()
 {
-  std::cout << "called destructor on node(" << value << ")\n";
   // Call delete to recurse through rest of list
   if (next) delete next;
 }

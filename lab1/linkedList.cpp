@@ -56,6 +56,14 @@ bool LinkedList::erase(int x)
 void LinkedList::print()
 {
   firstNode->print();
+  std::cout << "\n";
+}
+
+// Get first value in the list
+int LinkedList::head()
+{
+  if (firstNode == NULL) return -1;
+  return firstNode->value;
 }
 
 // Get pointer to where an integer is in the list. If not in the list, return
@@ -65,11 +73,11 @@ int* LinkedList::find(int x)
   return firstNode->find(x);
 }
 
+// Read a value from a stream
 std::istream& operator>>(std::istream &in, LinkedList &list)
 {
   int value;
-  while (in >> value)
-    {
-      list.insert(value);
-    }
+  in >> value;
+  list.insert(value);
+  return in;
 }

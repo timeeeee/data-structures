@@ -23,6 +23,9 @@ class LinkedList {
   // Print list
   void print();
 
+  // Get first number in list
+  int head();
+
   // Get pointer to where an integer is in the list. If not in the list, return null pointer
   int* find(int x);
 };
