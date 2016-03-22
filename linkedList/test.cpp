@@ -59,5 +59,7 @@ int main()
   // Test erasing the first element
   // Test find
 
+  std::cout << "All tests passed!\n";
+
   return 0;
 }

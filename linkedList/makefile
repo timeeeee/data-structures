@@ -13,8 +13,11 @@ linkedList.o: linkedList.h linkedList.cpp
 test.o: test.cpp
 	g++ -c test.cpp
 
-test: test.o linkedList.o node.o
+test_binary: test.o linkedList.o node.o
 	g++ test.o node.o linkedList.o -o test
 
+test: test_binary
+	./test
+
 clean:
-	rm -rf *.o *~ lab1
+	rm -rf *.o *~ lab1 test
