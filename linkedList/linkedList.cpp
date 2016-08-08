@@ -76,7 +76,7 @@ int* LinkedList::find(int x)
 // Read a value from a stream
 std::istream& operator>>(std::istream &in, LinkedList &list)
 {
-  int value;
+  int value = 0;
   in >> value;
   list.insert(value);
   return in;
