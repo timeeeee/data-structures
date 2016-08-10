@@ -25,6 +25,9 @@ class Node {
   // Return pointer to the node with value x. If not in list, return null
   int* find(int x);
 
+  // Is this node the last?
+  bool tail();
+
   // LinkedList member methods need to be able to access value and next of nodes
   // so that the first node can be removed if its value is erased.
   friend class LinkedList;

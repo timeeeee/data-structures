@@ -65,3 +65,9 @@ int* Node::find(int x)
   if (!next) return NULL;
   return next->find(x);
 }
+
+bool Node::tail()
+{
+  return (next == NULL);
+}
+  
