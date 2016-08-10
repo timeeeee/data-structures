@@ -70,6 +70,7 @@ int LinkedList::head()
 // null pointer.
 int* LinkedList::find(int x)
 {
+  if (firstNode == NULL) return NULL;
   return firstNode->find(x);
 }
 
