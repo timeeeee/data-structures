@@ -1,17 +1,31 @@
-all: main.o node.o linkedList.o hashTable.o
-	g++ main.o node.o linkedList.o hashTable.o -o lab2
+CXX=g++
+CXXFLAGS=-g -Wall
 
-node.o: node.h node.cpp
-	g++ -c -g node.cpp
+all: demo
 
-main.o: main.cpp
-	g++ -c -g main.cpp
+demo: demo.o node.o linkedList.o hashTable.o
+	$(CXX) $(CXXFLAGS) demo.o node.o linkedList.o hashTable.o -o demo
 
-linkedList.o: linkedList.h linkedList.cpp
-	g++ -c -g linkedList.cpp
+node.o: ../linkedList/node.h ../linkedList/node.cpp
+	$(CXX) $(CXXFLAGS) -c ../linkedList/node.cpp
+
+demo.o: demo.cpp
+	$(CXX) $(CXXFLAGS) -c demo.cpp
+
+linkedList.o: ../linkedList/linkedList.h ../linkedList/linkedList.cpp
+	$(CXX) $(CXXFLAGS) -c ../linkedList/linkedList.cpp
 
 hashTable.o: hashTable.h hashTable.cpp
-	g++ -c -g hashTable.cpp
+	$(CXX) $(CXXFLAGS) -c hashTable.cpp
+
+test.o: test.cpp
+	$(CXX) $(CXXFLAGS) -c test.cpp
+
+build_test: test.o linkedList.o node.o hashTable.o
+	$(CXX) $(CXXFLAGS) test.o node.o linkedList.o hashTable.o -o test
+
+test: build_test
+	valgrind --leak-check=yes --track-origins=yes ./test
 
 clean:
-	rm -rf *.o *~ lab2
+	rm -rf *.o *~ demo test
