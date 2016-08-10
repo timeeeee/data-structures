@@ -6,6 +6,27 @@
 
 int main()
 {  
+  // create and delete empty node
+  {
+    Node node(1);
+    assert(node.tail());
+  }
+
+  // Add some numbers to a node, delete 'em
+  {
+    Node node(1);
+    node.insert(2);
+    assert(!node.tail());
+    node.insert(3);
+    node.erase(2);
+    assert(node.find(1) != NULL);
+    assert(node.find(2) == NULL);
+    assert(node.find(3) != NULL);
+    node.erase(3);
+    assert(node.find(3) == NULL);
+    assert(node.tail());
+  }
+
   // is or is not empty
   {
     LinkedList list;
