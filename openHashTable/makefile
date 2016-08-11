@@ -29,3 +29,5 @@ test: build_test
 
 clean:
 	rm -rf *.o *~ demo test
+
+.PHONY: test clean all
