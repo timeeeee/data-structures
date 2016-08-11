@@ -37,6 +37,7 @@ bool LinkedList::isEmpty()
 // Delete integer from list. Return whether or not the number was in the list.
 bool LinkedList::erase(int x)
 {
+  if (!firstNode) return false;
   // If x is first element in list, get new firstNode pointer
   if (firstNode->value == x)
     {
@@ -55,8 +56,12 @@ bool LinkedList::erase(int x)
 // Print list
 void LinkedList::print()
 {
-  firstNode->print();
-  std::cout << "\n";
+  if (firstNode) {
+    firstNode->print();
+    std::cout << "\n";
+  } else {
+    std::cout << "List is empty.\n";
+  }
 }
 
 // Get first value in the list
@@ -70,6 +75,7 @@ int LinkedList::head()
 // null pointer.
 int* LinkedList::find(int x)
 {
+  if (firstNode == NULL) return NULL;
   return firstNode->find(x);
 }
 
