@@ -51,7 +51,7 @@ bool HashTable::find(int key) {
 
 // Read a key from an istream into the table
 std::istream& operator>>(std::istream &in, HashTable &table) {
-  int key;
+  int key = 0;
   in >> key;
   table.insert(key);
   return in;
