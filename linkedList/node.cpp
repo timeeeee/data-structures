@@ -19,14 +19,13 @@ Node::~Node()
 // Insert new value (new node if next is null, otherwise recurse)
 void Node::insert(int x)
 {
-  if (next)
-    {
+  if (value != x) {
+    if (next) {
       next->insert(x);
-    }
-  else
-    {
+    } else {
       next = new Node(x);
     }
+  }
 }
 
 // If the _next_ node has value x, remove it and reconnect the list
